@@ -1,0 +1,2 @@
+# BoxSekai
+Three.jsでbox3を用いたAABBな衝突判定を行うjavascript 3Dゲーム環境
