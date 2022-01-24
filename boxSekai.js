@@ -118,8 +118,6 @@ class BoxSekai {
       this.PLAYER_RADIUS * 2
     )
     const geometry = new THREE.BoxGeometry(size.x, size.y, size.z)
-    geometry.userData.obb = new THREE.OBB()
-    geometry.userData.obb.halfSize.copy(size).multiplyScalar(0.5)
 
     const material = new THREE.MeshBasicMaterial({ color: 'gray' })
 
@@ -128,7 +126,6 @@ class BoxSekai {
 
     const bbox = new THREE.Mesh(geometry, material)
     bbox.position.y = this.PLAYER_HEIGHT / 2
-    bbox.userData.obb = new THREE.OBB()
 
     this.player.bbox = bbox
     this.player.bbox.geometry.computeBoundingBox()
